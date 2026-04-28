@@ -74,7 +74,6 @@
 					\item $\mathbb{C} = \left\{x + iy | x, y \in \mathbb{R}\right\}$ is a field
 					\item $\Re(z) = \frac{z + \overline{z}}{2}$, $\Im(z) = \frac{z - \overline{z}}{2 i}$
 					\item $z = re^{i\theta}$: $x = r \cos\theta$, $y = r \sin\theta$
-					\item $e^{in \theta} = (e^{i \theta})^n$
 					\item $\left|z\right| = 0 \iff z = 0$
 					\item $\left|z^2\right| = \left|z\right|^2 = z \overline{z}$
 					\item $\overline{zw} = (\overline{z}) (\overline{w})$
@@ -171,8 +170,7 @@
 			
 			\begin{itemize}
 				\item If $u, v$ are cont.sly diffable (derivative is cont.) on a neighbourhood of $(x_0, y_0)$ and satisfy the C-R eqns at $(x_0, y_0)$, then $f$ is diffable at $z_0$.
-				\item C-R can be abbrev.ed by defining $\partial = \left(\frac{\partial }{\partial x} - i \frac{\partial }{\partial  y}\right)$, $\overline{\partial } = \left(\frac{\partial }{\partial x} + i \frac{\partial }{\partial  y} \right)$. \\
-				Then $f$ satisfies the C-R equations iff $\overline{\partial }f = 0$.
+				\item Functions which are non-constant and purely real-valued or imaginary-valued are nowhere hol.
 			
 			\end{itemize}
 			
@@ -934,7 +932,7 @@
 			If $f(z) := \frac{1}{iz}R\left(\frac{z + 1/z}{2}, \frac{z - 1/z}{2i}\right)$; $f(\exp(i\theta)) = \frac{1}{i \exp(i\theta)}R(\cos\theta, \sin\theta)$. Parametrise $C_1(0)$ by $\gamma : [0, 2 \pi] \to \mathbb{C}, \gamma(\theta) = \exp(i\theta)$. Then $\int_{C_1(0)} f(z) \text{ dz} = \int_{0}^{2 \pi} f(\gamma(\theta)) \gamma'(\theta) \text{ d}\theta = \int_{0}^{2 \pi}f(\exp(i\theta))i \exp(i\theta) \text{ d}\theta = \int_{0}^{2 \pi}\frac{1}{i \exp(i\theta)} R(\cos\theta, \sin\theta)i \exp(i\theta) \text{ d}\theta = \int_{0}^{2\pi} R(\cos\theta, \sin\theta) \text{ d}\theta$.
 			So we may transform a real integral to a contour integral, then apply the CRT.
 			
-		\end{xmp}		
+		\end{xmp}	
 		
 		
 		\begin{xmp}[Evaluating Infinite Series With Contour Integrals]{xmp:infsersints}{ }
@@ -944,14 +942,15 @@
 			To find $\text{Res}(f, 0)$ we compute the LE centred at $0$, remembering that we only care about the $a_1$ term so can ignore most higher order terms:
 			\sbsadaptr{
 			\begin{align*}
-				f(z) &= \frac{1}{z^2} \frac{1}{\sin( \pi z)} = \frac{1}{z^3} \frac{1}{1 - (\pi z)^2/3! + ...}\\
+				&f(z) = \frac{1}{z^2} \frac{1}{\sin( \pi z)} \\
+				&= \frac{1}{z^3} \frac{1}{1 - (\pi z)^2/3! + ...}\\
 				&= \frac{1}{\pi z^3} \frac{1}{(1 - (\pi z)^2/6 - ...)}\\
 				&= \frac{1}{\pi z^3} (1 + ((\pi z)^2)/3! + ...) \\
 				&+ (\frac{(\pi z)^2}{6} + ...)^2 + ...) = \frac{1}{\pi z^3} + \frac{\pi}{6z} + ...
 			\end{align*}
 			}
 			{
-			\includegraphics[scale=0.11]{squarecontour.png}
+			\includegraphics[scale=0.14]{squarecontour.png}
 			}
 			Thus $\text{Res}(f. 0) = \pi/6$.
 			Now consider $\Gamma_N$ as shown, for $N \in \mathbb{N}$.
