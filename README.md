@@ -9,6 +9,7 @@ LaTeX lecture notes and exam notes for a variety of courses in UoE CompSci and M
 ## Links to 2-page Exam Sheets <i>Made by [Louis!](https://github.com/AulrenT)</i> 
 
 <details>
+    These notes are optimised for printing on UoE Altalink C8035 printers with margins set to 'Minimum' in printing setup. Printing another way may cause clipping issues - test before relying on it.
     <summary>Year 3</summary>
     <ul>
         <li> <b>Honours Complex Variables</b> - <a href="exam-sheets/HCov/PDF/HCovExamNotes.pdf">click here!</a> </li>
