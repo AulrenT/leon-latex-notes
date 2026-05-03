@@ -7,7 +7,7 @@ LaTeX lecture notes and exam notes for a variety of courses in UoE CompSci and M
 <!-- such a shameless self promotion u dickhead -->
 <!-- ur lucky i didn't replace ur kofi with mine mate -->
 ## Links to 2-page Exam Sheets <i>Made by [Louis!](https://github.com/AulrenT)</i> 
-
+*NB - These notes are optimised for printing on UoE Altalink C8035 printers with margins set to 'Minimum' in printing setup. Printing another way may cause clipping issues - test before relying on it.*
 <details>
     <summary>Year 3</summary>
     <ul>
@@ -17,7 +17,9 @@ LaTeX lecture notes and exam notes for a variety of courses in UoE CompSci and M
 </details>
 
 ## [LEGACY] Links to 6-page Exam Sheets
-Outdated - SoM Exam Standard Is Now 2 Pages
+Outdated - SoM Exam Standard Is Now 2 Pages  
+*Recompiling these with thmboxes_v5 and preamble.sty is possible, but requires some fiddling with packages and reformatting*
+
 
 <details>
 <summary>Year 2</summary>
