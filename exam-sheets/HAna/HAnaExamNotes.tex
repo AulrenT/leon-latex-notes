@@ -3,9 +3,6 @@
 \usepackage{../../preamble}
 \usepackage[separate]{../../rss/thmboxes_v5}
 
-%For \upgamma symbol for graphs
-\usepackage{upgreek}
-
 
 \begin{document}
 	
@@ -19,55 +16,17 @@
 	\setlength{\belowdisplayskip}{0pt}
 	\setlength{\abovedisplayshortskip}{0pt}
 	\setlength{\belowdisplayshortskip}{0pt}
+	\setlength\multicolsep{0pt}
 	
 	\begin{multicols*}{4}
 		\raggedcolumns 
 		%Original template by Leon, modified by Louis. Content by Louis
+		\vspace*{-14pt}
+		\subsection*{HAna Exam 2025/26 - An Analyst Never Forgets}
 		\vspace{-5pt}
-		\subsection*{HAna Exam Sheet 2025/26 - Back From The Dead}
-		\vspace{-5pt}
-		
-		
-		
-		\begin{thm}[Random Theorems]{thm:randthms}{ }
-			\begin{itemize}
-				\item $\sum_{n=1}^{\infty} 2^{-n}\epsilon =\epsilon$ for $\epsilon > 0$.
-				\item \textbf{Convergent Geometric Series}: For $\left|r\right| < 1$, $\frac{1}{1-r} = \sum_{k=0}^{\infty}r^k$
-				\item Let $f: [a, b] \to \mathbb{R}$ be cont. Then:
-					\begin{itemize}
-						\item \textit{MVT}: If $f$ diffable on $(a, b)$; $\exists c\in (a, b)$ s.t. $f'(c) = \frac{f(b)-f(a)}{b-a}$
-						\item \textit{IVT}: $\forall x$ between $f(a)$ and $f(b)$, $\exists c\in (a, b)$ s.t. $f(c) = x$.
-					\end{itemize}	
-			\end{itemize}
-			
-		\end{thm}
-		
-		
-		\begin{dfn}[Random Definitions]{dfn:randdfns}{ }
-			\begin{itemize}
-				\item $\limsup_{n\to \infty}a_n := \lim_{n\to \infty}(\sup_{k \ge n}a_k)$
-				\item $\liminf_{n\to \infty}a_n := \lim_{n\to \infty}(\inf_{k \ge n}a_k)$
-			\end{itemize}
-			
-		\end{dfn}
-		
-		
-		\begin{thm}[Convergence Tests]{thm:convtests}{ }
-			\begin{itemize}
-				\item \textit{Sequences MCT}: If a real sequence $(a_n)_{n \in \mathbb{N}}$ is monotone non-decreasing and bdd above; or monotone non-increasing and bdd below; it converges.
-				\item If a seq converges to $L$, all its subseqs also converge to $L$ (so to disprove convergence find two subseqs converging to different limits).
-				\item \textit{Limsup/inf}: $(x_n)_{n\in \mathbb{N}}$ converges iff $\limsup_{n\to \infty}x_n = \liminf_{n \to \infty}x_n$.
-				\item \textit{p-Series}: $\sum_{n=1}^{\infty}\frac{1}{n^p}$ converges if $p >1$, diverges otherwise.
-				\item \textit{Ratio}: For $\sum_{n=1}^{\infty}$ with all $a_n \ne 0$, $\rho = \lim_{n\to \infty}\left|\frac{a_{n+1}}{a_n}\right|$; if $0 \le \rho < 1$ series converges absolutely, if $\rho > 1$ series diverges.
-				\item \textit{Alternating Series}: For $\sum_{n=1}^{\infty} (-1)^{n+1} b_n$ or $\sum_{n=1}^{\infty}(-1)^n b_n$, if $b_{n +1} \le b_n$ for all $n\ge 1$ and $b_n \to 0$ the series converges.
-				\item \textit{Root}: For $\sum_{n+1}^{\infty}a_n$, $\rho := \lim_{n\to \infty} \sqrt[n]{\left|a_n\right|}$, if $0 \le \rho < 1$ series converges absolutely, if $\rho > 1$ series diverges.
-				\item \textit{Limit Comparison}: For $\sum_{n=1}^{\infty} a_n$ and $\sum_{n=1}^{\infty}b_n$, $a_n \ge 0, b_n > 0$ for all $n$, if $\lim_{n\to \infty} \frac{a_n}{b_n} = c$ with $0 < c < \infty$; both series converge or both diverge.
-			\end{itemize}
-			
-			
-		\end{thm}
-		
-		
+	
+	
+	
 	%----------------------------------------------------------------------------------%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%----------------------------------------------------------------------------------%
@@ -84,9 +43,7 @@
 			Let $A \subseteq R$.
 			\begin{itemize}[label=*]
 				\item $x \in \mathbb{R}$ is an \textbf{upper bound for $A$} if $x \ge a$ for all $a \in A$
-				\item $A$ is \textbf{bounded above} if there exists an upper bound $x \in \mathbb{R}$ for $A$.
 				\item $s \in \mathbb{R}$ is a \textbf{least upper bound} or \textbf{supremum} for $A$ if $s$ is an upper bound for $A$, and $x \ge s$ whenever $x$ is an upper bound for $A$.
-				\item \textbf{Lower bounds} stuff is akin to this - if u don't know it go back to FPM
 				\item $A$ is \textbf{bounded} if it is bounded above and below
 			\end{itemize}
 			
@@ -111,23 +68,12 @@
 		\end{thm}
 		
 		
-		\begin{dfn}[Convergence]{dfn:cnvgnce}{ }
+		\begin{dfn}[Sequence Convergence]{dfn:seqcnvgnce}{ }
 			A real sequence $(a_n)_{n \in \mathbb{N}}$ \textbf{converges} to $a \in \mathbb{R}$ iff for every $\epsilon > 0$ there exists $N \in \mathbb{N}$ such that $\left|a_n - a\right| <\epsilon$ for all $n \ge N$. A sequence which does not converge to some real number \textbf{diverges}.
 			\begin{itemize}
 				\item We say $a_n \to \infty$ as $n \to \infty$ if $\forall R \in \mathbb{R}$, $\exists N \in \mathbb{N}$ s.t. $a_n > R$ for all $n \ge \mathbb{N}$
 				\item We say $a_n \to -\infty$ as $n \to \infty$ if $\forall R \in \mathbb{R}$, $\exists N \in \mathbb{N}$ s.t. $a_n < R$ for all $n \ge \mathbb{N}$
 			\end{itemize}
-			
-		\end{dfn}
-		
-		
-		\begin{dfn}[Monotonicity]{dfn:monton}{ }
-			Let $(a_n)_{n \in \mathbb{N}}$ be a real sequence and $A := \{a_n : n \in\mathbb{N}\}$. Then:
-			\begin{enumerate}[label=(\arabic*)]
-				\item $(a_n)_{n \in \mathbb{N}}$ is \textbf{monotone non-decreasing} if $a_{n + 1} \ge a_n$ for all $n \in \mathbb{N}$
-				\item $(a_n)_{n \in \mathbb{N}}$ is \textbf{monotone non-increasing} if $a_{n + 1} \le a_n$ for all $n \in \mathbb{N}$
-				\item $(a_n)_{n\in \mathbb{N}}$ is \textbf{bounded above/bounded below/bounded} if $A$ is such
-			\end{enumerate} 
 			
 		\end{dfn}
 		
@@ -140,7 +86,9 @@
 		
 		\begin{mthm}[The Cauchy Criterion]{thm:}{ }
 			A real sequence is convergent if and only if it is Cauchy.
-			\vspace{-8pt}
+			\vspace{1pt}
+			\hrule	
+			\vspace{-6pt}
 			\begin{proof}
 				1: Let $(a_n)_{n\in \mathbb{N}}$ be convergent. Then $\exists a\in\mathbb{R}$ s.t. $\lim_{n\to \infty}a_n = a$, and for all $ \epsilon > 0$, $\exists N\in \mathbb{N}$ s.t. $\left|a_n -a\right| <\epsilon/2$ when $n \ge N$. Then by the TI, $\left|a_n - a_m\right| = \left|(a_n-a) + (a-a_m)\right| \le \left|a_n - a\right| + \left|a-a_m\right| = \left|a_n - a\right| + \left|a_m -a\right| <\epsilon/2 +\epsilon/2 =\epsilon$ for $m, n \ge N$, thus the sequence is Cauchy.\\
 				2: Let $(a_n)_{n\in \mathbb{N}}$ be Cauchy. First show it is bdd. Let $\epsilon = 1$. Then $\exists N\in \mathbb{N}$ s.t. $\left|a_n -a_m\right| < 1$ for $m, n \ge N$. In particular $\left|a_m\right| < 1+\left|a_N\right|$ for all $m \ge N$, so $\left|a_m\right| \le \max\{\left|a_1\right|, ..., \left|a_{N-1},\right|, \left|a_N\right| + 1\}$ for $m\in \mathbb{N}$, so $(a_n)_{n\in \mathbb{N}}$ is bdd. Secondly, by the B-WT, $\exists (a_{n_k})_{k\in \mathbb{N}}$ s.t. $a_{n_k} \to a\in \mathbb{R}$ as $k \to \infty$. Finally, show $a_n \to a$: Let $\epsilon > 0$. Since $(a_n)_{n\in \mathbb{N}}$ is Cauchy, $\exists N, K\in \mathbb{N}$ s.t. $\left|a_n - a_m\right| <\epsilon/2$ for $m, n \ge N$ and $\left|a_{n_k} - a \right| <\epsilon/2$ for $k \ge K$. Fix $k\in \mathbb{N}$ s.t. $k\ge K$ and $n_k \ge N$. Then $\left|a_n - a\right| \le \left|a_n - a_{n_k}\right| + \left|a_{n_k} - a\right| <\epsilon/2 +\epsilon/2 =\epsilon$, $\forall n \ge N$. Thus $a_n \to a$ as $n \to \infty$ as required.
@@ -150,14 +98,16 @@
 		
 		
 		\begin{dfn}[Subsequences]{dfn:subseqs}{ }
-			Let $(a_n)_{n \in \mathbb{N}}$ be a real sequence. A \textbf{subsequence} of $(a_n)_{n \in \mathbb{N}}$ is a real sequence of the form $(a_{n_k})_{k \in \mathbb{N}}$ where for each $k \in \mathbb{N}$ there exists $n_k \in \mathbb{N}$ such that $n_1 < n_2< ... < n_k < n_{k+1} < ...$. Ie, a subsequence is just some (possibly all) elements of a sequence taken in order.
+			Let $(a_n)_{n \in \mathbb{N}}$ be a real sequence. A \textbf{subsequence} of $(a_n)_{n \in \mathbb{N}}$ is a real sequence of the form $(a_{n_k})_{k \in \mathbb{N}}$ where for each $k \in \mathbb{N}$ there exists $n_k \in \mathbb{N}$ such that $n_1 < n_2< ... < n_k < n_{k+1} < ...$.
 			
 		\end{dfn}
 		
 		
 		\begin{thm}[Bolzano-Weierstrass Theorem]{thm:bolzweier}{ }
 			Every bounded sequence of real numbers has a convergent subsequence.
-			\vspace{-8pt}
+			\vspace{1pt}
+			\hrule	
+			\vspace{-6pt}
 			\begin{proof}
 				Let $(a_n)_{n\in \mathbb{N}}$ be a bdd seq., with upper/lower bound $a, b\in \mathbb{R}$. Let $I_1 = [a, b]$ and divide $I_1$ into $I_1' = [a, (a+b)/2], I_1'' = [(a+b)/2, b]$. Since $I_1 = I_1' \cup I_1''$, at least one of $I_1', I_1''$ contains infinitely many $a_n$. Choose one with this property and denote it $I_2$. Let $n_2\in \mathbb{N}$ be s.t. $n_2 > n_1 = 1$ and $a_{n_2}\in I_2$. Repeat inductively.\\
 				By the above process we recursively define a nested sequence of intervals $(I_k)_{k\in \mathbb{N}}$ and subsequence $(a_{n_k})_{k\in \mathbb{N}}$ s.t. each $I_k$ contains infinitely many terms of $(a_n)_{n\in \mathbb{N}}$, $a_{n_k}\in I_k$, and $\lambda(I_k) = 2^{-(k-1)}(b-a)$.\\
@@ -182,30 +132,34 @@
 		\end{mdfn}
 		
 		
-		\begin{mthm}[The Cauchy Criterion For Series]{thm:cauchforseries}{ }
-			Let $(a_k)_{k=1}^\infty$ be a real sequence. Then $\sum_{k=1}^{\infty}a_k$ converges iff for all $\epsilon > 0$ there exists $N \in \mathbb{N}$ such that $\left|\sum_{k=m+1}^{n}a_k\right| <\epsilon$ for all $n > m \ge N$.
-			\vspace{-8pt}
-			\begin{proof}
-				Let $(s_n)_{n\in \mathbb{N}}$ be the seq. of partial sums of the series. Observe that $s_n - s_m = \sum_{k=1}^{n}a_k - \sum_{k=1}^{m}a_k = \sum_{k=m+1}^{n}a_k$ for $n > m$. Then the series satisfies the Cauchy criterion iff $(s_n)_{n\in \mathbb{N}}$ is Cauchy. $(s_n)_{n\in \mathbb{N}}$ is Cauchy iff it is convergent, and convergent iff $\sum_{k=1}^{\infty}a_k$ converges.
-			\end{proof}
-			
-		\end{mthm}
-		
-		
 		\begin{dfn}[Absolute Convergence]{dfn:absconv}{ }
-			Let $(a_n)_{n \in \mathbb{N}}$ be a real sequence.
+			Let $(a_n)_{n \in \mathbb{N}}$ be a real sequence. Then $\sum_{n=1}^{\infty} a_n$:
 			\begin{enumerate}[label=(\arabic*)]
-				\item We say $\sum_{n=1}^{\infty} a_n$ \textbf{converges absolutely} if $\sum_{n=1}^{\infty} \left|a_n\right|$ converges
-				\item We say $\sum_{n=1}^{\infty}a_n$ \textbf{converges conditionally} if it converges but $\sum_{n=1}^{\infty}\left|a_n\right|$ diverges.
+				\item \textbf{Converges absolutely} if $\sum_{n=1}^{\infty} \left|a_n\right|$ converges
+				\item \textbf{Converges conditionally} if it converges but $\sum_{n=1}^{\infty}\left|a_n\right|$ diverges.
 			\end{enumerate}
 			
 			Absolute convergence implies convergence.
-			\vspace{-8pt}
+			\vspace{1pt}
+			\hrule	
+			\vspace{-6pt}
 			\begin{proof}
 				Let $(a_k)_{k=1}^\infty$ be a real seq., and $\sum_{n=1}^{\infty}a_n$ be absolutely convergent. We show the series satisfies the Cauchy criterion: Let $\epsilon > 0$. Since $\sum_{n=1}^\infty$ cnvges absolutely, by the Cauchy criterion for series $\exists N\in \mathbb{N}$ s.t. $\sum_{k=m+1}^{n}\left|a_k\right| <\epsilon$ for all $n > m \ge N$. Now let $n > m \ge N$ and apply the TI repeatedly to obtain $\left|\sum_{k=m+1}^n a_k\right| \le \sum_{k=m+1}^n \left|a_k\right| <\epsilon$. This establishes the Cauchy criterion for $\sum_{n=1}^\infty a_n$, so the series is convergent.
 			\end{proof}
 			
 		\end{dfn}
+		
+		
+		\begin{mthm}[The Cauchy Criterion For Series]{thm:cauchforseries}{ }
+		Let $(a_k)_{k=1}^\infty$ be a real sequence. Then $\sum_{k=1}^{\infty}a_k$ converges iff for all $\epsilon > 0$ there exists $N \in \mathbb{N}$ such that $\left|\sum_{k=m+1}^{n}a_k\right| <\epsilon$ for all $n > m \ge N$.
+		\vspace{1pt}
+		\hrule	
+		\vspace{-6pt}
+		\begin{proof}
+			Let $(s_n)_{n\in \mathbb{N}}$ be the seq. of partial sums of the series. Observe that $s_n - s_m = \sum_{k=1}^{n}a_k - \sum_{k=1}^{m}a_k = \sum_{k=m+1}^{n}a_k$ for $n > m$. Then the series satisfies the Cauchy criterion iff $(s_n)_{n\in \mathbb{N}}$ is Cauchy. $(s_n)_{n\in \mathbb{N}}$ is Cauchy iff it is convergent, and convergent iff $\sum_{k=1}^{\infty}a_k$ converges.
+		\end{proof}
+		
+		\end{mthm}
 		
 		
 		\begin{thm}[The Riemann Rearrangement Theorem]{thm:riearrange}{ }
@@ -219,7 +173,7 @@
 		
 		
 		
-		{\tiny \textbf{\underline{Subsets Of The Real Line}}}
+	{\tiny \textbf{\underline{Subsets Of The Real Line}}}
 		
 		
 		
@@ -231,6 +185,7 @@
 				\item The intersection of any finite collection of open sets is open
 				\item Any nonempty open $U \subseteq \mathbb{R}$ is a finite or countable union of nonempty disjoint open intervals.
 				\item If $f: \mathbb{R} \to \mathbb{R}$ is continuous and $\lambda \in \mathbb{R}$, then $\{x \in \mathbb{R} : f(x) > \lambda\}$ is open.
+				\item For $U \subseteq\mathbb{R}$, $f: U \to \mathbb{R}$ cont., $\lambda\in \mathbb{R}$, $\left\{x\in U : f(x) > \lambda\right\}$ is open.
 			\end{itemize}
 			
 		\end{dfn}
@@ -243,36 +198,25 @@
 				\item The union of any finite collection of closed sets is closed
 				\item The intersection of any collection of closed sets is closed
 				\item If $f: \mathbb{R} \to \mathbb{R}$ is continuous and $ \lambda \in \mathbb{R}$, then $\{x \in \mathbb{R} : f(x) \le \lambda\}$ is closed.
-				\item If $F \subseteq \mathbb{R}$ closed and $U \subseteq \mathbb{R}$ open; $U \backslash F$ is open and $F \backslash U$ is closed
 			\end{itemize}
 			
 		\end{dfn}
 		
 		
 		\begin{dfn}[Sequential Closure]{dfn:seqclos}{ }
-			$F \subseteq \mathbb{R}$ is \textbf{sequentially closed} if for every convergent sequence $(x_n)_{n \in \mathbb{N}}$ s.t. $x_n \in F$ for all $n \in \mathbb{N}$, the limit $x := \lim_{n\to \infty}x_n$ satisfies $x \in F$. \\
-			$F \subseteq \mathbb{R}$ is closed if and only if it is sequentially closed.
-			\vspace{-8pt}
+			$F \subseteq \mathbb{R}$ is \textbf{sequentially closed} if for every convergent sequence $(x_n)_{n \in \mathbb{N}}$ s.t. $x_n \in F$ for all $n \in \mathbb{N}$, the limit $x := \lim_{n\to \infty}x_n$ satisfies $x \in F$.
+			\begin{itemize}
+				\item $F \subseteq \mathbb{R}$ is closed if and only if it is sequentially closed.
+			\end{itemize}
+			\vspace{1pt}
+			\hrule	
+			\vspace{-6pt}
 			\begin{proof}
 				First prove by contrapositive closed sets are sequentially closed: Let $F$ be closed and $(x_n)_{n\in \mathbb{N}}$ convergent s.t. $x:= \lim_{n\to \infty}x_n \notin F$. We show $\exists N\in \mathbb{N}$ s.t. $x_N \notin F$. $F$ is closed, so by definition $U := \mathbb{R} \backslash F$ is open. \\
 				Moreover $x\in U$, so $\exists\epsilon > 0 $ s.t. $(x-\epsilon, x+\epsilon \subseteq U)$, and $N\in \mathbb{N}$ s.t. \\
 				$\left|x_n - x\right| <\epsilon$ $\forall n\in \mathbb{N}$. In particular $x_N\in (x-\epsilon, x +\epsilon) \subseteq U$, so $x_N \notin F$.\\
 				Now prove by contradiction sequentially closed sets are closed: Suppose $F$ is not closed, equivalently $U := \mathbb{R} \backslash F$ is not open. Then $\exists x\in U$ s.t. $\forall r > 0$, $(x-r, x+r) \cap F \ne \emptyset$. For $n\in \mathbb{N}$, let $x_n \in ((x - \frac{1}{n}, x+ \frac{1}{n}) \cap F)$. Then $(x_n)_{n\in \mathbb{N}}$ converges to $x$, since $\left|x - x_n\right| \le \frac{1}{n}$. In particular, since $F$ is sequentially closed, we must have $x\in F$, a contradiction.
 			\end{proof}
-			
-		\end{dfn}
-		
-		
-		\begin{dfn}[Level Sets]{dfn:lvlsets}{ }
-			Let $f : \mathbb{R} \to \mathbb{R}$ be continuous and $\lambda\in \mathbb{R}$: 
-			\begin{itemize}
-			\item The \textbf{level set} $\{x\in \mathbb{R} : f(x) = \lambda\}$ is closed
-			\item The \textbf{strict superlevel set} $\{x\in \mathbb{R} : f(x) > \lambda\}$ is open
-			\item The \textbf{superlevel set} $\{x\in \mathbb{R} : f(x) \ge \lambda\}$ is closed
-			\item The \textbf{strict sublevel set} $\{x\in \mathbb{R} : f(x) < \lambda\}$ is 	
-			\item The \textbf{sublevel set} $\{x\in \mathbb{R} : f(x) \le \lambda\}$ is closed
-			\end{itemize}
-			Then for continuous $f: \mathbb{R} \to \mathbb{R}$ and $a, b\in \mathbb{R}, a<b$, we can characterise the level set $\{x\in \mathbb{R}: a \le f(x) < b\}$ as the intersection between a closed set and an open set.
 			
 		\end{dfn}
 		
@@ -291,239 +235,6 @@
 		
 		
 		
-	%----------------------------------------------------------------------------------%
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION 2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	%----------------------------------------------------------------------------------%
-	
-	
-	{\footnotesize \textbf{\underline{Uniform Continuity, Uniform Convergence, Power Series}}}
-	
-	
-	{\tiny\textbf{\underline{Uniform Continuity}}}
-		
-		
-		
-		\begin{mdfn}[Uniform Continuity]{dfn:unifcont}{ }
-			Let $I \subseteq \mathbb{R}$ be an interval and $f: I \to \mathbb{R}$. $f$ is \textbf{uniformly continuous} if $\forall \epsilon > 0$, $\exists \delta > 0$ s.t. $\left|f(x) - f(y)\right| <\epsilon$ $\forall x, y \in I$ s.t. $\left|x-y\right| < \delta$. Note the key difference with regular continuity - here $\delta$ may only depend on $\epsilon$ only, not $x$.
-			
-		\end{mdfn}
-		
-		
-		\begin{thm}[The Heine-Cantor Theorem]{thm:heincan}{ }
-			If $a < b$ and $f: [a, b] \to \mathbb{R}$ is continuous, then $f$ is uniformly continuous.
-			
-		\end{thm}
-		
-		
-		
-	{\tiny \textbf{\underline{Uniform Convergence}}}	
-		
-		
-		
-		\begin{dfn}[Pointwise Convergence]{dfn:ptwiseconv}{ }
-			Let $E \subseteq \mathbb{R}$ be nonempty. A sequence of functions $f_n: E \to \mathbb{R}$ \textbf{converges pointwise on $E$ to $f: E \to \mathbb{R}$} if for all $x\in E$ and $ \epsilon > 0$, there exists $N\in \mathbb{N}$ s.t. $\left|f_n(x) - f(x)\right| <\epsilon$ for all $n \ge N$.
-			
-		\end{dfn}
-		
-		
-		\begin{thm}[Pointwise Convergence Theorems]{thm:ptwiseconv}{ }
-			\begin{itemize}[label=*]
-				\item The pointwise limit of bounded functions is not always bounded
-				\item The ptwise limit of cont funcs is not always cont. $\exists f_n, f: [0,1] \to \mathbb{R}$ s.t.
-				\begin{itemize}
-					\item $f_n$ is continuous for all $n \in \mathbb{N}$
-					\item $f_n \to f$ pointwise on $[0, 1]$ as $n \to \infty$
-					\item $f$ is not continuous
-					\item Example: $f_n(x) := 0$ if $ 0 \le x \le \frac{1}{2} - \frac{1}{2n}$; $nx - \frac{n-1}{2}$ if $ \frac{1}{2} - \frac{1}{2n} \le x \le \frac{1}{2}+ \frac{1}{2n}$; $1$ if $\frac{1}{2} + \frac{1}{2n} \le x \le 1$
-				\end{itemize}
-				\item The pointwise limit of differentiable functions is not always differentiable. $\exists f_n, f: (-1, 1) \to \mathbb{R}$ s.t.:
-				\begin{itemize}
-					\item $f_n$ is differentiable for all $N \in \mathbb{N}$
-					\item $f_n \to f$ pointwise on $(-1, 1)$ as $n \to \infty$
-					\item $f$ is not differentiable
-					\item Example: Let $f_n(x) := \sqrt{x^2 + \frac{1}{n}}$, limit is not diffable at $0$.
-				\end{itemize}
-				\item The pointwise limit of derivatives is not always the derivative of the pointwise limit. $\exists f_n, f : (-1, 1) \to \mathbb{R}$ s.t.
-				\begin{itemize}
-					\item $f_n$ is diffable for all $n \in \mathbb{N}$ and $f$ is diffable
-					\item $f_n \to f$ pointwise on $(-1, 1)$
-					\item $f'(0) \ne \lim_{n\to \infty}f'_n(0)$, ie $\left(\lim_{n\to \infty f_n}\right)'(0) \ne \lim_{n\to \infty}f_n'(0)$ - the derivate and ptwise lim operations do not commute.
-					\item Example: Let $f_n(x) = \frac{\sin(2 \pi n x)}{2 \pi n}, f'_n = \cos(2\pi n x), f = 0$
-				\end{itemize}
-			\end{itemize}
-			
-		\end{thm}
-		
-		
-		\begin{dfn}[Graph and Vertical Neighbourhood]{dfn:graphnvertneigh}{ }
-			Let $f: E \to \mathbb{R}$. The \textbf{graph of $f$} is the set $\upgamma(f) : = \left\{(f, f(x) : x\in E)\right\} \subset \mathbb{R}^2$.\\
-			For $ \epsilon > 0$, the $e-$vertical neighbourhood of the graph of $f$ is the set $\mathscr{N}(f,\epsilon) := \left\{(x, y) : x\in E, \left|y-f(x)\right| <\epsilon\right\} \subset \mathbb{R}^2$.
-			
-		\end{dfn}
-		
-		
-		\begin{mdfn}[Uniform Convergence]{mdfn:unifcon}{ }
-			Let $E \subseteq \mathbb{R}$ be nonempty. A sequence of functions $f_n: E \to \mathbb{R}$ \textbf{converges uniformly on $E$ to $f:: E \to \mathbb{R}$} if for all $\epsilon > 0$ there exists $N\in \mathbb{N}$ s.t. $\left|f_n(x) - f(x)\right| <\epsilon$ for all $x\in E, n \ge N$.
-			\begin{itemize}
-				\item Uniform convergence implies pointwise convergence. \\
-				For counterexample of converse use $f_n, f: (0, 1]  \to \mathbb{R}$. $f_n(x) := 1 $ if $0 < x < \frac{1}{n}$; $0$ if $\frac{1}{n} \le x \le 1$ and $f(x) :=0$.
-			\end{itemize}
-			
-		\end{mdfn}
-		
-		
-		\begin{thm}[Uniform Convergence Properties]{thm:unifconv}{ }
-			Let $E \subseteq \mathbb{R}$ be nonempty, $f_n : E \to \mathbb{R}$ be a sequence of funcs, and $f: E \to \mathbb{R}$.
-			\begin{itemize}
-				\item The following are equivalent:
-				\begin{enumerate}[label=(\arabic*)]
-					\item $f_n \to f$ uniformly on $E$ as $n \to \infty$
-					\item $\sup_{x\in E}\left|f_n(x) - f(x)\right| \to 0$ as $n \to \infty$
-					\item For all $\epsilon > 0$ there exists $N\in \mathbb{N}$ s.t. $\upgamma(f_n) \subset \mathscr{N}(f,\epsilon)$ for all $n \ge N$.
-				\end{enumerate}
-				\item Let $f_n \to f$ uniformly on $E$ as $n \to \infty$. If $(x_n)_{n\in \mathbb{N}}$ is a real sequence with $x_n\in E$ for all $n\in \mathbb{N}$, then $\left|f_n(x_n) - f(x_n)\right| \to 0$ as $n \to \infty$.
-			\end{itemize}
-			
-		\end{thm}
-		
-		
-		
-		\begin{dfn}[Uniform Cauchy]{dfn:unifcauch}{ }
-			Let $E \subseteq \mathbb{R}$ be nonempty and $f_n : E \to \mathbb{R}$ be a sequence of functions. We say $(f_n)_{n\in \mathbb{N}}$ is \textbf{uniformly Cauchy on $E$} if for all $\epsilon > 0$ there exists $N\in \mathbb{N}$ s.t. $\left|f_n(x) - f_m(x)\right| < \epsilon$ for all $x\in E$ and $m, n \ge N$.
-			
-		\end{dfn}
-		
-		
-		\begin{mthm}[The Uniform Cauchy Criterion]{thm:unifcauchcrit}{ }
-			$(f_n)_{n\in \mathbb{N}}$ converges unifly on $E$ iff $(f_n)_{n\in \mathbb{N}}$ is unifly Cauchy on $E$.
-			
-		\end{mthm}
-		
-		
-		\begin{thm-s}[Uniform Limits Of Continuous/Diffable Functions]{thm:uniflimscontdiff}{ }
-			\begin{itemize}
-				\item A unif lim of diffable funcs is not always diffable. $\exists f_n, f : (-1, 1) \to \mathbb{R}$ s.t.:
-				\begin{itemize}
-					\item $f_n$ is differentiable for all $n\in \mathbb{N}$
-					\item $f_n \to f$ uniformly on $(-1, 1)$ as $n \to \infty$
-					\item $f$ is not differentiable
-					\item Example: consider $f_n(x) := \sqrt{x^2 + \frac{1}{n}}$
-				\end{itemize}
-				\item Let $I \subseteq \mathbb{R}$ be a bnded open interval, $f_n : I \to \mathbb{R}$ a seq of diffable funcs s.t.:
-				\begin{enumerate}[label=(\arabic*)]
-					\item There exists $x_0\in I$ s.t. $(f_n(x_0))_{n\in \mathbb{N}}$ converges
-					\item There exists $g: I \to \mathbb{R}$ s.t. $f_n' \to g$ uniformly on $I$ as $n \to \infty$.
-				\end{enumerate}
-				Then there exists diffable $f: I \to \mathbb{R}$ s.t. $f_n \to f$ uniformly on $I$ as $n \to \infty$. Alternatively $(\lim_{n\to \infty}f_n)'(x) = \lim_{n\to \infty}f_n'(x)$ for all $x\in I$, ie differentiation commutes with taking the uniform limit under our conditions.
-			\end{itemize}
-			
-		\end{thm-s}
-		
-		
-		\begin{dfn}[Uniform Convergence Of Series Of Functions]{dfn:unficonvfuncseries}{ }
-			Let $E \subseteq \mathbb{R}$ be $\ne \emptyset$, $f_n : E \to \mathbb{R}$ be a seq. of real funcs. The \textbf{sequence of partial sums} is $s_n: E \to \mathbb{R}$, $s_n(x) := \sum_{k=1}^{n}f_k(x)$ for all $x\in E, n\in \mathbb{N}$. Then:
-			\begin{enumerate}[label=(\arabic*)]
-				\item $\sum_{n=1}^{\infty}f_n$ \textbf{converges ptwise on $E$} if $(s_n)_{n\in \mathbb{N}}$ converges ptwise on $E$.
-				\item $\sum_{n=1}^{\infty}f_n$ \textbf{converges unifly on $E$} if $(s_n)_{n\in \mathbb{N}}$ converges unifly on $E$
-				\item $\sum_{n=1}^{\infty}f_n$ \textbf{converges absolutely (pointwise) on $E$} if $\sum_{n=1}^{\infty}\left|f_n(x)\right|$ converges $\forall x\in E$.
-			\end{enumerate}
-			
-		\end{dfn}
-		
-		
-		\begin{thm}[On Termwise Differentiation]{thm:trmwisediff}{ }
-			Let $I \subset \mathbb{R}$ be a bdd open interval and $f_n: I \to \mathbb{R}$ a seq. of diffable funcs s.t.:
-			\begin{enumerate}[label=(\arabic*)]
-				\item There exists $x_0\in I$ such that $\sum_{n=1}^{\infty}f_n(x_0)$ converges
-				\item $\sum_{n=1}^{\infty}f_n'$ converges uniformly on $I$.
-			\end{enumerate}
-			Then there exists diffable $f : I \to \mathbb{R}$ such that $\sum_{n=1}^{\infty}f_n$ converges uniformly to $f$ on $I$, and $f'(x) = \left(\sum_{n=1}^{\infty}f_n\right)'(x) = \sum_{n=1}^{\infty}f_n'(x)$ for all $x\in I$.
-			
-		\end{thm}
-		
-		
-		\begin{thm}[Weierstrass M-Test]{thm:weierm}{ }
-			Let $E \subseteq \mathbb{R}$ be $\ne \emptyset$, $f_n: E \to \mathbb{R}$, and $(M_n)_{n\in \mathbb{N}}$ a non-negative seq satisfying:
-			\begin{enumerate}[label=(\arabic*)]
-				\item $\left|f_n(x)\right| \le M_n$ for all $x\in E, n\in \mathbb{N}$
-				\item $\sum_{n=1}^{\infty}M_n$ converges
-			\end{enumerate}
-			Then $\sum_{n=1}^{\infty}f_n$ converges absolutely and uniformly on $E$.
-			\vspace{-8pt}
-			\begin{proof}
-				Let $\epsilon > 0$. By the CC for series, $\exists N\in \mathbb{N}$ s.t. $\sum_{k=m+1}^{n} M_k <\epsilon$ for $n \ge m \ge N$. Thus by hypothesis, $\left|\sum_{k=m+1}^{n} f_k(x)\right| \le \sum_{k=m+1}^{n}\left|f_k(x)\right| \le \sum_{k=m+1}^{n}M_k <\epsilon$ for all $x\in E, n > m \ge N$. Thus the partial sums of $\sum_{n=1}^{\infty}f_n$ are unifly Cauchy, so $\sum_{n=1}^{\infty}f_n$ converges unifly. Moreover, by the above, the partial sums of $\sum_{n=1}^{\infty}\left|f_n\right|$ are unifly Cauchy, so the series converges absolutely.
-			\end{proof}
-			
-		\end{thm}
-		
-		
-		\begin{thm}[Continuity Of Uniform Limits]{thm:uniflimscont}{ }
-			Let $I \subseteq\mathbb{R}$ be an interval, $f_n, f : I \to \mathbb{R}$ s.t. $f_n \to f$ unifly on $I$ as $n \to \infty$. For all $x_0\in I$, if each $f_n$ is continuous at $x_0$, then $f$ is continuous at $x_0$.
-			\vspace{-8pt}
-			\begin{proof}
-				Let $\epsilon > 0$. Since $f_n \to f$ unifly on $I$, $\exists N\in \mathbb{N}$ s.t. $\left|f_n(x) - f(x)\right| <\epsilon/3$ for all $x\in I, n \ge N$. Since $f_N$ is cont. at $x_0\in I$, $\exists \delta >0$ s.t. $\left|f_N(x) - f_N(x_0)\right| <\epsilon/3$ for all $x\in I$ s.t. $\left|x-x_0\right| < \delta$. Now let $x\in I$ be s.t. $\left|x - x_0\right| < \delta$. Then by the TI, $\left|f(x) - f(x_0)\right| \le \left|f(x) - f_N(x)\right| + \left|f_N(x) - f_N(x_0)\right| + \left|f_N(x_0) -f(x_0)\right| <\epsilon$. Thus $f$ is cont. at $x_0\in I$.
-			\end{proof}
-			
-		\end{thm}
-		
-		
-		
-		{\tiny \textbf{\underline{Power Series}}}
-		
-		
-		
-		\begin{dfn}[Power Series]{dfn:powseries}{ }
-			Let $(a_n)_{n\in \mathbb{N}}$ be a real sequence and $c\in \mathbb{R}$. A \textbf{power series centred at $c$} is a series of the form $\sum_{n=0}^{\infty}a_n(x-c)^n$.
-			
-		\end{dfn}
-		
-		
-		\begin{dfn}[Radius Of Convergence]{dfn:radofconv}{ }
-			Let $(a_n)_{n\in \mathbb{N}}$ be a real seq and $c\in \mathbb{R}$. Then one of the following holds:
-			\begin{enumerate}[label=(\arabic*)]
-				\item $\sum_{n=0}^{\infty}a_n(x-c)^n$ converges only when $x = c$
-				\item $\sum_{n=0}^{\infty}a_n(x-c)^n$ converges absolutely for all $x\in \mathbb{R}$
-				\item There exists $R > 0, R\in \mathbb{R}$ such that $\sum_{n=0}^{\infty}a_n(x-c)^n$ converges absolutely when $\left|x - c\right| < R$ and diverges when $\left|x-c\right|> R$. Here $R = \sup\{r > 0 : (a_nr^n)_{n\in \mathbb{N}_0} \text{ is bounded }\}$
-			\end{enumerate}
-			The $R$ in case $(3)$ is the \textbf{radius of convergence} of $\sum_{n=0}^{\infty}a_n(x-c)^n$. In cases $(1)$ and $(2)$ we say $R=0$ and $R = \infty$ respectively.
-			
-		\end{dfn}
-		
-		
-		\begin{thm}[On Termwise Differentiation Of Power Series]{thm:contndiffpwrseries}{ }
-			Let $\sum_{n=0}^{\infty}a_n(x-c)^n$ have radius of convergence $0 < R \le \infty$. Then $f(x) = \sum_{n=0}^{\infty}a_n(x-c)^n$ for $x\in (c-R, c+R)$ is differentiable on $(c-R, c+R)$; and $f'(x) = \sum_{n=1}^{\infty}na_n(x-c)^{n-1}$ for all $x\in (c-R, c+R)$.
-			\begin{itemize}
-				\item Given the above, $f(x) := \sum_{n=0}^{\infty}a_n(x-c)^n$  is \textbf{infinitely differentiable} on $(c-R, c+R)$, and $a_k = \frac{f^(k)(c)}{k!}$ for all $k\in \mathbb{N}_0$.
-				\item For $0 < r < R$, both series converge absolutely and unifly on $[c-r, c+r]$
-				\item For any real sequence $(a_n)_{n\in \mathbb{N}_0}$ and $c\in \mathbb{R}$, $\sum_{n=0}^{\infty}a_n(x-c)^n$ and $\sum_{n=1}^{\infty}na_n(x-c)^{n-1}$ have the same radius of convergence
-			\end{itemize}
-			
-		\end{thm}
-		
-		
-		\begin{mthm}[Uniqueness Of Power Series]{thm:uniqpwrsers}{ }
-			Power series are unique - For $\sum_{n=0}^{\infty}a_n(x-c)^n$ and $\sum_{n=0}^{\infty}b_n(x-c)^n$ with RoCs $0 < R, S, \le \infty$, if $\exists 0 < r < \min{R, S}$ s.t. $\sum_{n=0}^{\infty} a_n(x-c)^n = \sum_{n=0}^{\infty}b_n (x-c)^n$ for all $x\in \mathbb{R}$ s.t. $\left|x-c\right| < r$, then $a_n = b_n$ for all $n\in \mathbb{N}$.
-			\vspace{-8pt}
-			\begin{proof}
-				Let $I = (c-r, c+r)$, and $f: I \to \mathbb{R}, f(x) := \sum_{n=0}^{\infty}a_n(x-c)^n$ for $x\in I$. We know $f$ is infinitely diffable on $I$, and $a_n = \frac{f^{(n)}(c)}{n!}$ for $n\in \mathbb{N}_0$. However, $f(x) = \sum_{n=0}^{\infty}b_n(x-c)^n$ for $x\in I$, and $b_n = \frac{f^{(n)}(c)}{n!}$ for all $n\in \mathbb{N}_0$. Thus $a_n = b_n$ for all $n\in \mathbb{N}_0$.
-			\end{proof}
-			
-		\end{mthm}
-		
-		
-		\begin{dfn}[The Exponential]{dfn:exp}{ }
-			Consider $\sum_{n=0}^{\infty}\frac{x^n}{n!}$ with RoC $R = \infty$. $\exp(x) := e^x := \sum_{n=0}^{\infty}\frac{x^n}{n!}$.
-			
-		\end{dfn}
-		
-		
-		\begin{dfn}[Taylor Series]{dfn:tayser}{ }
-			Let $I \subseteq \mathbb{R}$ be a nonempty open interval, and $f: I \to \mathbb{R}$ be infinitely diffable. Then the \textbf{Taylor series of $f$ at $c\in I$} is $\sum_{n=0}^{\infty}\frac{f^{(n)}(c)}{n!}(x-c)^n$.
-			$f$ is \textbf{real analytic} if its TS converges ptwise on $I$ and equals $f(x)$ at $x$
-			
-		\end{dfn}
-		
-		
 		
 	\columnbreak
 	%----------------------------------------------------------------------------------%
@@ -531,6 +242,8 @@
 	%----------------------------------------------------------------------------------%
 	
 	
+	
+	\vspace*{-8pt}
 	{\footnotesize \textbf{\underline{Measure And Integration}}}
 	
 	
@@ -538,27 +251,48 @@
 		
 		
 		
-		\begin{dfn}[The Lebesgue Outer Measure]{dfn:lebesoutmes}{ }
-			For $E \subseteq \mathbb{R}$, the \textbf{Lebesgue outer measure of $E$} is $m^*(E): \mathcal{P}(\mathbb{R}) \to [0, \infty] := \inf \left\{\sum_{j=1}^{\infty}\lambda(I_j) : E \subseteq\bigcup_{j=1}^\infty I_j, I_j \subseteq \mathbb{R} \text{ an open interval}\right\}$. Here the inf is over all countable coverings $(I_j)_{j\in \mathbb{N}}$ of $E$ by open intervals.
+		\begin{dfn}[Length]{dfn:length}{ }
+			For a nonempty bounded interval $I \subseteq \mathbb{R}$, we define the \textbf{length $\lambda$ of I} as $\lambda(I) = \sup(I) - \inf(I)$. $\lambda(\emptyset) = 0$ and for $I$ unbounded, $\lambda(I) = \infty$.
+			
+		\end{dfn}
+		
+		
+		\begin{mdfn}[Lebesgue Measurable Sets]{mdfn:lebmesable}{ }
+			$E \subseteq \mathbb{R}$ is \textbf{Lebesgue measurable} if for all $\epsilon > 0$, there exists open $U \subseteq \mathbb{R}$ s.t. $E \subseteq U$ and $m(U \backslash E) <\epsilon$. The collection of all L-mesable subsets of $\mathbb{R}$ is $\mathcal{M} \subseteq \mathcal{P}(\mathbb{R})$.\\
+			We only handle L-mesable sets in this course thankfully!
+			
+		\end{mdfn}
+		
+		\begin{mdfn}[The Lebesgue Measure]{dfn:lebmes}{ }
+			The \textbf{Lebesgue measure} is the function $m : \mathcal{M} \to [0, \infty]$. For $E\in \mathcal{M}$, $m(E) := \inf \left\{\sum_{j=1}^{\infty}\lambda(I_j) : E \subseteq\bigcup_{j=1}^\infty I_j, I_j \subseteq \mathbb{R} \text{ an open interval}\right\}$. Here the inf is over all countable coverings $(I_j)_{j\in \mathbb{N}}$ of $E$ by open intervals.
 			\begin{itemize}
-				\item[*] $m^*(\emptyset) = 0$
-				\item[*] If $E \subseteq F \subseteq \mathbb{R}$, $m^*(E) \le m^*(F)$
-				\item[*] If $(E_j)_{j\in \mathbb{N}}$ is any seq of subsets of $\mathbb{R}$, $m^*\left(\bigcup_{j=1}^{\infty} E_j\right) \le \sum_{j=1}^{\infty}m^*(E_j)$
-				\item If $\sum_{j=1}^{\infty}\lambda(I_j)$ diverges, we say it has value $\infty$. If there is no cover of $E$ s.t. $\sum_{j=1}^{\infty}\lambda(I_j) < \infty$, $m^*(E) = \infty$.
-				\item For any interval $J \subseteq\mathbb{R}$, $\lambda(J) = m^*(J)$.
-				\item Given $E \subseteq\mathbb{R}$, $\epsilon > 0$, $\exists$ open $U \subseteq \mathbb{R}$ s.t. $E \subseteq U$ and $m^*(U) < m^*(E) +\epsilon$.
+				\item[*] $m(\emptyset) = 0$
+				\item[*] If $E \subseteq F \subseteq \mathbb{R}$, $m(E) \le m(F)$
+				\item[*] If $(E_j)_{j\in \mathbb{N}}$ is any seq of sets in $\mathcal{M}$, $m\left(\bigcup_{j=1}^{\infty} E_j\right) \le \sum_{j=1}^{\infty}m(E_j)$.
+				\item[*] If the $E_j$ above are all disjoint then $m\left(\bigcup_{j=1}^{\infty} E_j\right) = \sum_{j=1}^{\infty}m(E_j)$
+				\item If $\sum_{j=1}^{\infty}\lambda(I_j)$ diverges, we say it has value $\infty$. If there is no cover of $E$ s.t. $\sum_{j=1}^{\infty}\lambda(I_j) < \infty$, $m(E) = \infty$.
+				\item For any interval $J \subseteq\mathbb{R}$, $\lambda(J) = m(J)$.
+				\item Given $E \subseteq\mathbb{R}$, $\epsilon > 0$, $\exists$ open $U \subseteq \mathbb{R}$ s.t. $E \subseteq U$ and $m(U) < m(E) +\epsilon$.
 			\end{itemize}
+			
+		\end{mdfn}
+		
+		
+		\begin{dfn}[The Lebesgue Outer Measure]{dfn:leboutmes}{ }
+			The \textbf{Lebesgue Outer Measure} is $m^* : \mathcal{P} \to [0, \infty]$. We base our definition of $m$ on this, $m^*(E) = m(E)$ for $E\in \mathcal{M}$. For $E \notin \mathcal{M}$ it is only countably subadditive (ie measure of union $\le$ sum of measures).
 			
 		\end{dfn}
 		
 		
 		\begin{dfn}[Null Sets]{dfn:nullsets}{ }
-			A set $E \subseteq \mathbb{R}$ is \textbf{null} or \textbf{has measure zero} if $m^*(E) = 0$.\\
+			A set $E \subseteq \mathbb{R}$ is \textbf{null} or \textbf{has measure zero} if $m(E) = 0$.\\
 			Every countable subset of $R$ has measure zero.
-			\vspace{-8pt}
+			\vspace{1pt}
+			\hrule	
+			\vspace{-6pt}
 			\begin{proof}
-				First prove any singleton set $\{x\}$ for $x\in \mathbb{R}$ has measure zero. Given $x\in \mathbb{R}$, let $\epsilon > 0$ and consider the cover $I  := \left(x-\epsilon/2, x +\epsilon/2\right)$. Then $m^*(\{x\}) \le \lambda(I) =\epsilon$. Since $\epsilon > 0$ is arbitrary we conclude $m^*(\{x\}) = 0$. \\
-				Any countable $E$ is a countable union of singletons, $E = \bigcup_{j=1}^\infty \{x_j\}$. Apply the countable subadditivity property to conclude $m^*(E) = 0$.
+				First prove any singleton set $\{x\}$ for $x\in \mathbb{R}$ has measure zero. Given $x\in \mathbb{R}$, let $\epsilon > 0$ and consider the cover $I  := \left(x-\epsilon/2, x +\epsilon/2\right)$. Then $m(\{x\}) \le \lambda(I) =\epsilon$. Since $\epsilon > 0$ is arbitrary we conclude $m(\{x\}) = 0$. \\
+				Any countable $E$ is a countable union of singletons, $E = \bigcup_{j=1}^\infty \{x_j\}$. Apply the countable subadditivity property to conclude $m(E) = 0$.
 			\end{proof}
 			
 		\end{dfn}
@@ -567,22 +301,17 @@
 		\begin{dfn}[Distance Between Sets]{dfn:dist}{ }
 			For $E, F \subseteq \mathbb{R}$ $\ne \emptyset$ and disjoint; dist$(E, F) := \inf\left\{\left|x-y\right|: x\in E, y\in F\right\}$.
 			\begin{itemize}
-				\item If $E, F \subseteq \mathbb{R}$ $\ne \emptyset$, disjoint, dist$(E, F) > 0$; $m*(E \cup F) = m^*(E) + m^*(F)$
-				\item If $F< K \subseteq \mathbb{R}$ nonempty, closed, $F \cup K = \emptyset$, $K$ bounded; dist$(F, K) > 0$.
-				\item For $(K_j)_{j\in \mathbb{N}}$ a sequence of disjoint closed $K_i \subseteq \mathbb{R}$; $m^*\left(\bigcup_{j=1}^\infty K_j\right) = \sum_{j=1}^{\infty}m^*(K_j)$
+				\item If $E, F \subseteq \mathbb{R}$ $\ne \emptyset$, disjoint, dist$(E, F) > 0$; $m*(E \cup F) = m(E) + m(F)$
+				\item If $F, K \subseteq \mathbb{R}$ nonempty, closed, $F \cap K = \emptyset$, $K$ bounded; then dist$(F, K) > 0$.
+				\item If $(K_j)_{j\in \mathbb{N}}$ a seq of disjoint closed $K_i$; $m\left(\bigcup_{j=1}^\infty K_j\right) = \sum_{j=1}^{\infty}m(K_j)$
 			\end{itemize}
 			
 		\end{dfn}
 		
 		
-		\begin{mdfn}[Lebesgue Measurable Sets]{mdfn:lebmesable}{ }
-			$E \subseteq \mathbb{R}$ is \textbf{Lebesgue measurable} if for all $\epsilon > 0$, there exists open $U \subseteq \mathbb{R}$ s.t. $E \subseteq U$ and $m^*(U \backslash E) <\epsilon$. The collection of all L-mesable subsets of $\mathbb{R}$ is denoted $\mathcal{M}$.
-			
-		\end{mdfn}
-		
-		
 		\begin{thm}[Properties Of L-Measurable Sets]{thm:lmesprops}{ }
 			\begin{itemize}
+				\item Any open set is L-measurable
 				\item Let $F \subseteq \mathbb{R}$ and $(E_j)_{j\in \mathbb{N}}$ be L-mesable. Then:
 					\begin{enumerate}[label=(\arabic*)]
 						\item The union $E := \bigcup_{j=1}^\infty E_j$ is L-mesable
@@ -590,27 +319,15 @@
 						\item The intersection $\bigcap_{j=1}^\infty E_j$ is L-mesable
 					\end{enumerate}
 				\item Let $E, F \subseteq \mathbb{R}$ be L-mesable. Then $F \backslash E$ is L-mesable
-				\item For $E \subseteq \mathbb{R}$, $E$ is L-mesable iff $\forall \epsilon > 0$, $\exists$ closed $K \subseteq E$ and $m^*(E \backslash K) <\epsilon$.
+				\item For $E \subseteq \mathbb{R}$, $E$ is L-mesable iff $\forall \epsilon > 0$, $\exists$ closed $K \subseteq E$ s.t. $m(E \backslash K) <\epsilon$.
 			\end{itemize}
 			
 		\end{thm}
 		
 		
-		\begin{mdfn}[The Lebesgue Measure]{dfn:lebmes}{ }
-			The \textbf{Lebesgue measure} is the function $m : \mathcal{M} \to [0, \infty]$ given by $m(E) := m^*(E)$ for $E\in \mathcal{M}$.
-			
-		\end{mdfn}
-		
-		
-		\begin{thm}[Countable Additivity Of The Lebesgue Measure]{thm:lebmesctableadd}{ }
-			For disjoint L-mesable $(E_j)_{j\in \mathbb{N}}$, $m\left(\bigcup_{j=1}^\infty E_j\right) = \sum_{j=1}^{\infty}m(E_j)$.
-			
-			
-		\end{thm}
-		
-		
 		\begin{thm}[Monotone Convergence For Measure]{thm:montonconvmes}{ }
-			Let $(E_j)_{j\in \mathbb{N}}$ be a seq. of L-mesable sets s.t. $E_j \subseteq E_{j+1}$ for all $j\in \mathbb{N}$. Then $m\left(\bigcup_{j=1}^\infty E_j\right) = \lim_{j\to \infty}E_j$
+			Let $(E_j)_{j\in \mathbb{N}}$ be a seq. of L-mesable sets s.t. $E_j \subseteq E_{j+1}$ $\forall j\in \mathbb{N}$. \\
+			Then $m\left(\bigcup_{j=1}^\infty E_j\right) = \lim_{j\to \infty}m(E_j)$
 			
 		\end{thm}
 		
@@ -638,7 +355,8 @@
 			Let $s: \mathbb{R} \to [0, \infty)$ be simple, $a_j\in [0, \infty), E_j\in \mathcal{M}$, $s = \sum_{j=1}^{k}a_j \chi_{E_j}$. The \textbf{Lebesgue integral of $s$} is $\int_\mathbb{R} s(x) \text{ dx} := \sum_{j=1}^{k}a_j m(E_j)\in [0, \infty)$.
 			\begin{itemize}
 				\item $\int_\mathbb{R} \chi_E(x) \text{ dx} := m(E)$
-				\item This L-integral respects linearity
+				\vspace{1pt}
+				\item For $E_j$ with infinite measure, the integral takes value $\infty$. If $a_j = 0$ and $\lambda(E_j) = \infty$, use the convention $0 \cdot \infty = 0$.
 			\end{itemize}
 			
 		\end{dfn}
@@ -647,7 +365,7 @@
 		\begin{mdfn}[Lebesgue Measurable Functions]{dfn:lmesablefuncs}{ }
 			Let $E \subseteq \mathbb{R}$ be L-mesable. $f: \mathbb{E} \to \mathbb{R}$ is \textbf{Lebesgue measurable} if for all $\lambda\in \mathbb{E}$, the strict superlevel set $\{x\in \mathbb{E} : f(x) > \lambda\}$ is L-mesable
 			\begin{itemize}
-				\item Any simple function is L-mesable
+%				\item Any simple function is L-mesable
 				\item Any continuous function $f: \mathbb{R} \to \mathbb{R}$ is L-mesable
 				\item If $E \subseteq \mathbb{R}$, $f, g : \mathbb{R} \to \mathbb{R}$ are all L-mesable; then $\max\{f, g\}$, $\min\{f, g\}$, $f\cdot\chi_E$ are all L-mesable
 				\item If $f, g : \mathbb{R} \to \mathbb{R}$ L-mesable, $\alpha, \beta\in \mathbb{R}$; then $\alpha f + \beta g$, $f \cdot g$ are L-mesable.
@@ -674,7 +392,7 @@
 				\item Let $f, g : \mathbb{R} \to [0, \infty)$ be L-mesable. Then:
 					\begin{enumerate}[label=(\arabic*)]
 						\item If $0 \le f(x) \le g(x)$ for all $x\in \mathbb{R}$, $0 \le \int_{\mathbb{R}}f(x) \text{ dx} \le \int_{\mathbb{R}}g(x) \text{ dx}$
-						\item For all $\lambda > 0$, $m\left(\{x\in \mathbb{R} : f(x) > \lambda\}\right) \le \frac{1}{\lambda} \int_{\mathbb{R}}f(x) \text{ dx}$
+						\item For all $\lambda > 0$, $m\left(\{x\in \mathbb{R} : f(x) > \lambda\}\right) \le \frac{1}{\lambda} \int_{\mathbb{R}}f(x) \text{ dx}$ (Markov's Ineq.)
 					\end{enumerate} 
 				\item This L-integral respects linearity
 				\item If $f: \mathbb{R} \to [0, \infty)$ is L-mesable and $E, F \subseteq \mathbb{R}$ are disjoint L-mesable sets, $\int_{E \cup F} f(x) \text{ dx} = \int_E f(x) \text{ dx} + \int_F f(x) \text{ dx}$
@@ -697,7 +415,13 @@
 		
 		
 		\begin{mthm}[The MCT For Lebesgue Integrals]{thm:mctlebints}{ }
-			Let $f_k : \mathbb{R} \to [0, \infty)$ be a ptwise non-decreasing seq. of non-negative L-mesable funcs converging ptwise to $f:=\lim_{k\to \infty} f_k : \mathbb{R} \to [0, \infty)$. Then $f$ is L-mesable $\lim_{k\to \infty}\int_{\mathbb{R}}f_k(x) \text{ dx} = \int_{\mathbb{R}}\lim_{k\to \infty}f_k(x) \text{ dx} = \int_{\mathbb{R}}f(x) \text{ dx}$.
+			Let $f_k : \mathbb{R} \to [0, \infty)$ be a ptwise non-decreasing seq. of non-negative L-mesable funcs converging ptwise to $f:=\lim_{k\to \infty} f_k : \mathbb{R} \to [0, \infty)$. Then $f$ is L-mesable, and $\lim_{k\to \infty}\int_{\mathbb{R}}f_k(x) \text{ dx} = \int_{\mathbb{R}}\lim_{k\to \infty}f_k(x) \text{ dx} = \int_{\mathbb{R}}f(x) \text{ dx}$. Note both sides may equal $\infty$.
+			
+			\begin{itemize}
+				\item For $f, g: \mathbb{R} \to [0, \infty)$ L-mesable and $\alpha, \beta \ge 0$, the integral respects linearity
+				\item If $f:\mathbb{R} \to [0, \infty)$ L-mesable and $E, F \subseteq \mathbb{R}$ disjoint, $\int_{E \cup F} f(x) \text{ dx} = \int_E f(x) \text{ dx} + \int_F f(x) \text{ dx}$.
+				\item For $h_k : \mathbb{R} \to [0, \infty)$ a seq. of L-mesable funcs s.t. $\sum_{k=1}^{\infty} h_k$ converges pointwise, $\sum_{k=1}^{\infty} \int_{\mathbb{R}}h_k(x) \text{ dx} = \int_{\mathbb{R}} \sum_{k=1}^{\infty} h_k(x) \text{ dx}$.
+			\end{itemize}
 			
 		\end{mthm}
 		
@@ -726,7 +450,7 @@
 			For L-integrable $f: \mathbb{R} \to \mathbb{R}$, $\int_{\mathbb{R}}f(x) \text{ dx} := \int_{\mathbb{R}}f^+ (x) \text{ dx} - \int_{\mathbb{R}}f^- (x) \text{ dx}$.
 			\begin{itemize}
 				\item For $f\in \mathcal{L}^1(\mathbb{R})$, $\left|\int_{\mathbb{R}}f(x) \text{ dx}\right| \le \int_{\mathbb{R}}\left|f(x) \right|dx$
-				\item This L-integral respects linearity
+				\item This L-integral respects linearity for $\alpha, \beta\in \mathbb{R}$.
 				\item For L-mesable $E \subseteq \mathbb{R}$, $\mathcal{L}^1(E) = \left\{f: E \to \mathbb{R} : \text{$f$ is L-mesable, }\tilde{f}\in \mathcal{L}^1(\mathbb{R})\right\}$.
 			\end{itemize}
 			
@@ -736,7 +460,7 @@
 		\begin{mthm}[The Dominated Convergence Theorem]{mthm:domconv}{ }
 			Let $f_k : \mathbb{R} \to \mathbb{R}$ be a seq. of L-integrable funcs converging ptwise to $f: \mathbb{R} \to \mathbb{R}$, and $g\in \mathcal{L}^1(\mathbb{R})$ be s.t. $\left|f_k(x)\right| \le g(x)$ for all $x\in \mathbb{R}, k\in \mathbb{N}$. Then $f\in \mathcal{L}^1(\mathbb{R})$ and $\lim_{k\to \infty}\int_{\mathbb{R}}f_k(x) \text{ dx} = \int_{\mathbb{R}}\lim_{k\to \infty}f_k(x) \text{ dx} = \int_{\mathbb{R}}f(x) \text{ dx}$.
 			\begin{itemize}
-				\item Uniform Convergence Theorem for integrals: Let $E \subseteq \mathbb{R}$ be L-mesable s.t. $m(E) < \infty$, and $f_n : \mathbb{R} \to \mathbb{R}$ a seq. of L-integrable funcs s.t. $f_n \to f$ unifle on $E$ as $n \to \infty$, for $f : \mathbb{R} \to \mathbb{R}$. Then $f\in \mathcal{L}^1(\mathbb{R})$ and $\lim_{n\to \infty} \int_E f_n(x) \text{ dx} = \int_E \lim_{n\to \infty} f_n (x) \text{ dx}$
+				\item Uniform Convergence Theorem: Let $E \subseteq \mathbb{R}$ be L-mesable s.t. $m(E) < \infty$, and $f_n, f : \mathbb{R} \to \mathbb{R}$ L-integrable funcs s.t. $f_n \to f$ unifly on $E$ as $n \to \infty$, Then $f\in \mathcal{L}^1(\mathbb{R})$ and $\lim_{n\to \infty} \int_E f_n(x) \text{ dx} = \int_E \lim_{n\to \infty} f_n (x) \text{ dx}$
 			\end{itemize}
 			
 		\end{mthm}
@@ -748,6 +472,386 @@
 				\item For $a, b\in \mathbb{R}$, $a < b$, $f: [a, b] \to \mathbb{R}$ cont.sly diffable; $\int_{a}^{b}f'(x) \text{ dx} = f(b) - f(a)$
 			\end{itemize}
 			
+		\end{thm}		
+		
+		
+		
+		\columnbreak
+		\vspace*{-8pt}
+		%----------------------------------------------------------------------------------%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION 2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%----------------------------------------------------------------------------------%
+		
+		
+		{\footnotesize \textbf{\underline{Uniform Continuity, Uniform Convergence, Power Series}}}
+		
+		
+		{\tiny\textbf{\underline{Uniform Continuity}}}
+		
+		
+		
+		\begin{dfn}[Continuity]{dfn:cont}{ }
+		For $I \subseteq \mathbb{R}$ an interval and $f: I \to \mathbb{R}$, $f$ is \textbf{continuous} if for all $x_0\in I$, $\epsilon > 0$, there exists $\delta > 0$ s.t. $\left|f(x) - f(x_0)\right| <\epsilon \forall x$ s.t. $\left|x-x_0\right| < \delta$.
+		\begin{itemize}
+			\item A cont func. on $[a, b] \subseteq \mathbb{R}$ is bounded and attains a max/min on $[a, b]$.
+		\end{itemize}
+		
+		\end{dfn}
+		
+		
+		\begin{mdfn}[Uniform Continuity]{dfn:unifcont}{ }
+		Let $I \subseteq \mathbb{R}$ be an interval and $f: I \to \mathbb{R}$. $f$ is \textbf{uniformly continuous} if $\forall \epsilon > 0$, $\exists \delta > 0$ s.t. $\left|f(x) - f(y)\right| <\epsilon$ $\forall x, y \in I$ where $\left|x-y\right| < \delta$. Note the key difference with regular continuity - here $\delta$ may only depend on $\epsilon$, not $x$.
+		
+		\end{mdfn}
+		
+		
+		\begin{lma}[Helpful Uniform Continuity Stuff]{lma:unifconthelp}{ }
+		\begin{itemize}
+			\item If you can bound the deriv of a diffable func, by MVT it is\\
+			uniformly continuous (need to prove, for deriv bdd by $M$, use $\delta =\epsilon/M$.).
+			\item For all $x\in \mathbb{R}$, $-\frac{\pi}{2} < \arctan(x) < \frac{\pi}{2}$ and $1 \ge \arctan'(x) = \frac{1}{x^2 + 1} > 0$
+		\end{itemize}
+		
+		\end{lma}
+		
+		
+		\begin{thm}[The Heine-Cantor Theorem]{thm:heincan}{ }
+		If $a < b$ and $f: [a, b] \to \mathbb{R}$ is continuous, then $f$ is uniformly continuous.
+		
+		\end{thm}
+		
+		
+		\begin{xmp}[Proving Uniform Continuity]{xmp:proveunifcont}{ }
+		Show $f: (0, \infty) \to \mathbb{R}, f(x) := \frac{\sin(x)}{x}$ is uniformly continuous.\\
+		$f'(x) = \frac{x\cos(x) - \sin(x)}{x^2} = \frac{x(\cos(x)-1) + (x-\sin(x))}{x^2}$ for $x > 0$.\\
+		WLOG assume $x < y$. Apply MVT to $x \mapsto \cos(x)$. For $x > 0 \exists c\in (0, x)$ s.t. $\cos(x) -1 = -\sin(c)x$, so $\left|\cos(x) - 1\right| = \left|-\sin(c)x\right| \le \left|x\right|$.\\
+		Apply MVT to $x \mapsto x - \sin(x)$. For $x > 0, \exists d\in (0, x)$ s.t. $x-\sin(x) = (1-\cos(d))x$. As above $\left|1-\cos(d)\right| \le \left|x\right|$, so $\left|x-\sin(x)\right| \le \left|x\right| \left|x\right| = x^2$.\\
+		Thus for all $x > 0, \left|f'(x)\right| = \frac{\left|x(\cos(x)-1)\right| + \left|x-\sin(x)\right|}{x^2} \le \frac{x^2 + x^2}{x^2} = 2$
+		Then for all $x, y\in (0, \infty) \exists \xi\in (x, y)$ s.t. $\left|f(x) - f(y)\right| = \left|f'(\xi)\right| \left|x-y\right| \le 2\left|x-y\right|$ so let $\delta =\epsilon/2$, then $\left|f(x) - f(y)\right| \le 2\left|x-y\right| < 2 \delta =\epsilon$.
+		
+		\end{xmp}
+		
+		
+		\begin{xmp}[Disproving Uniform Continuity]{xmp:disproveunifcont}{ }
+		Show $f: (0, \infty) \to \mathbb{R}, f(x) = 1/x^2$ is not uniformly continuous.\\
+		It suffices to show for all $\delta > 0$ there exist $x, y\in \mathbb{R}$ s.t. $\left|x-y\right| < \delta$ and $\left|f(x) - f(y)\right| \ge 1$. Let $0 < x < y \le 0$. Observe $x + y > x$ and $x^2 y^2 \le x^2$. Then $\frac{1}{x^2} - \frac{1}{y^2} = \frac{y^2 - x^2}{x^2y^2} = \frac{(x-y)(x+y)}{x^2y^2} \ge \frac{y-x}{x} > 0$. Then given $\delta >0$ let $x = \min\{\delta, 1\}/2$ and $y=2x$. \\
+		Then $\left|x-y\right| = \min\{\delta, 1\}/2 < \delta$ and $\left|\frac{1}{x^2} - \frac{1}{y^2}\right| \ge \frac{y-x}{x} = \frac{x}{x} = 1$.\\
+		Key points - do inequalities in reverse to proving; bound $\left|f(x) - f(y)\right|$ below; $x, y$ may depend on $\delta$; can use any $x, y$ in the domain of $f$.
+		
+		\end{xmp}
+		
+		
+		
+		{\tiny \textbf{\underline{Uniform Convergence}}}	
+		
+		
+		
+		\begin{dfn}[Pointwise Convergence]{dfn:ptwiseconv}{ }
+		Let $E \subseteq \mathbb{R}$ be nonempty. A sequence of functions $f_n: E \to \mathbb{R}$ \textbf{converges pointwise on $E$ to $f: E \to \mathbb{R}$} if for all $x\in E$ and $ \epsilon > 0$, there exists $N\in \mathbb{N}$ s.t. $\left|f_n(x) - f(x)\right| <\epsilon$ for all $n \ge N$.\\
+		When proving pointwise convergence can just take lim of an expression as $n \to \infty$ to assert pointwise convergence to the lim (if it exists). 
+		
+		\end{dfn}
+		
+		
+		\begin{thm}[Pointwise Convergence Theorems]{thm:ptwiseconv}{ }
+		\begin{itemize}[label=*]
+			\item The pointwise limit of bounded functions is not always bounded
+			\begin{itemize}
+				\item (From exercise; counterxmp $f_n(x) = n/(nx + 1), f(x) = 1/x$ on $(0,1)$)
+			\end{itemize}
+			\item The ptwise limit of cont funcs is not always cont. $\exists f_n, f: [0,1] \to \mathbb{R}$ s.t.
+			\begin{itemize}
+				\item $f_n$ is continuous for all $n \in \mathbb{N}$
+				\item $f_n \to f$ pointwise on $[0, 1]$ as $n \to \infty$
+				\item $f$ is not continuous
+				\item Example: $f_n(x) := 0$ if $ 0 \le x \le \frac{1}{2} - \frac{1}{2n}$; $nx - \frac{n-1}{2}$ if $ \frac{1}{2} - \frac{1}{2n} \le x \le \frac{1}{2}+ \frac{1}{2n}$; $1$ if $\frac{1}{2} + \frac{1}{2n} \le x \le 1$
+			\end{itemize}
+			\item Ptwise lim of diffable funcs not always diffable. $\exists f_n, f: (-1, 1) \to \mathbb{R}$ s.t.:
+			\begin{itemize}
+				\item $f_n$ is differentiable for all $N \in \mathbb{N}$
+				\item $f_n \to f$ pointwise on $(-1, 1)$ as $n \to \infty$
+				\item $f$ is not differentiable
+				\item Example: Let $f_n(x) := \sqrt{x^2 + \frac{1}{n}}$, limit is not diffable at $0$.
+			\end{itemize}
+			\item The pointwise limit of derivatives is not always the derivative of the pointwise limit. $\exists f_n, f : (-1, 1) \to \mathbb{R}$ s.t.
+			\begin{itemize}
+				\item $f_n$ is diffable for all $n \in \mathbb{N}$ and $f$ is diffable
+				\item $f_n \to f$ pointwise on $(-1, 1)$
+				\item $f'(0) \ne \lim_{n\to \infty}f'_n(0)$, ie $\left(\lim_{n\to \infty f_n}\right)'(0) \ne \lim_{n\to \infty}f_n'(0)$, ie the derivate and ptwise lim operations do not commute.
+				\item Example: Let $f_n(x) = \frac{\sin(2 \pi n x)}{2 \pi n}, f'_n = \cos(2\pi n x), f = 0$ on $(-1, 1)$.
+			\end{itemize}
+		\end{itemize}
+		
+		\end{thm}
+		
+		
+		\begin{dfn}[Graph and Vertical Neighbourhood]{dfn:graphnvertneigh}{ }
+		Let $f: E \to \mathbb{R}$. The \textbf{graph of $f$} is the set $\Gamma(f) : = \left\{(f, f(x) : x\in E)\right\} \subset \mathbb{R}^2$.\\
+		For $ \epsilon > 0$, the \textbf{$\epsilon-$vertical neighbourhood of the graph of $f$} is the set \\
+		$\mathcal{N}(f,\epsilon) := \left\{(x, y) : x\in E, \left|y-f(x)\right| <\epsilon\right\} \subset \mathbb{R}^2$.
+		
+		\end{dfn}
+		
+		
+		\begin{mdfn}[Uniform Convergence]{mdfn:unifcon}{ }
+		Let $E \subseteq \mathbb{R}$ be nonempty. A sequence of functions $f_n: E \to \mathbb{R}$ \textbf{converges uniformly on $E$ to $f: E \to \mathbb{R}$} if for all $\epsilon > 0$ there exists $N\in \mathbb{N}$ s.t. $\left|f_n(x) - f(x)\right| <\epsilon$ for all $x\in E, n \ge N$.
+		\begin{itemize}
+			\item Uniform convergence implies pointwise convergence. \\
+			For counterexample of converse use $f_n, f: (0, 1]  \to \mathbb{R}$. $f_n(x) := 1 $ if $0 < x < \frac{1}{n}$; $0$ if $\frac{1}{n} \le x \le 1$ and $f(x) :=0$.
+		\end{itemize}
+		
+		\end{mdfn}
+		
+		
+		\begin{mthm}[Uniform Convergence Equivalencies]{thm:unifconv}{ }
+		Let $E \subseteq \mathbb{R}$ be nonempty, $f_n : E \to \mathbb{R}$ be a sequence of funcs, and $f: E \to \mathbb{R}$.
+		\begin{itemize}
+			\item The following are equivalent:
+			\begin{enumerate}[label=(\arabic*)]
+				\item $f_n \to f$ uniformly on $E$ as $n \to \infty$
+				\item $\sup_{x\in E}\left|f_n(x) - f(x)\right| \to 0$ as $n \to \infty$
+				\item For all $\epsilon > 0$ there exists $N\in \mathbb{N}$ s.t. $\Gamma(f_n) \subset \mathcal{N}(f,\epsilon)$ for all $n \ge N$.
+			\end{enumerate}
+			Let $f_n \to f$ uniformly on $E$ as $n \to \infty$. If $(x_n)_{n\in \mathbb{N}}$ is a real sequence with $x_n\in E$ for all $n\in \mathbb{N}$, then $\left|f_n(x_n) - f(x_n)\right| \to 0$ as $n \to \infty$.
+		\end{itemize}
+		
+		\end{mthm}
+		
+		
+		\begin{thm}[Sequence Test For Uniform Convergence]{thm:unifconvseqtest}{ }
+		Let $E \subseteq \mathbb{R}$ be nonempty, $f_n:E \to \mathbb{R}$ a seq. of funcs, $f: E \to \mathbb{R}$, and $f_n \to f$ uniformly on $E$ as $n \to \infty$. If $(x_n)_{n\in \mathbb{N}}$ a real seq. with $x_n\in E$ for all $n \ge \mathbb{N}$, $\left|f_n(x_n) - f(x_n)\right| \to 0$ as $n \to \infty$.
+		
+		\end{thm}
+		
+		
+		
+		\begin{dfn}[Uniformly Cauchy]{dfn:unifcauch}{ }
+		Let $E \subseteq \mathbb{R}$ be nonempty and $f_n : E \to \mathbb{R}$ be a sequence of functions. We say $(f_n)_{n\in \mathbb{N}}$ is \textbf{uniformly Cauchy on $E$} if for all $\epsilon > 0$ there exists $N\in \mathbb{N}$ s.t. $\left|f_n(x) - f_m(x)\right| < \epsilon$ for all $x\in E$ and $m, n \ge N$.
+		
+		\end{dfn}
+		
+		
+		\begin{mthm}[The Uniform Cauchy Criterion]{thm:unifcauchcrit}{ }
+		$(f_n)_{n\in \mathbb{N}}$ converges unifly on $E$ iff $(f_n)_{n\in \mathbb{N}}$ is unifly Cauchy on $E$.
+		
+		\end{mthm}
+		
+		
+		\begin{thm-s}[Uniform Limits Of Continuous/Diffable Functions]{thm:uniflimscontdiff}{ }
+		\begin{itemize}
+			\item A unif lim of diffable funcs is not always diffable. $\exists f_n, f : (-1, 1) \to \mathbb{R}$ s.t.:
+			\begin{itemize}
+				\item $f_n$ is differentiable for all $n\in \mathbb{N}$
+				\item $f_n \to f$ uniformly on $(-1, 1)$ as $n \to \infty$
+				\item $f$ is not differentiable
+				\item Example: consider $f_n(x) := \sqrt{x^2 + (1/n)}$
+			\end{itemize}
+			\item Let $I \subseteq \mathbb{R}$ be a bdd open interval, $f_n : I \to \mathbb{R}$ a seq of diffable funcs s.t.:
+			\begin{enumerate}[label=(\arabic*)]
+				\item There exists $x_0\in I$ s.t. $(f_n(x_0))_{n\in \mathbb{N}}$ converges
+				\item There exists $g: I \to \mathbb{R}$ s.t. $f_n' \to g$ uniformly on $I$ as $n \to \infty$.
+			\end{enumerate}
+			Then there exists diffable $f: I \to \mathbb{R}$ s.t. $f_n \to f$ uniformly on $I$ as $n \to \infty$. Alternatively $(\lim_{n\to \infty}f_n)'(x) = \lim_{n\to \infty}f_n'(x)$ for all $x\in I$, ie differentiation commutes with taking the uniform limit under our conditions.
+		\end{itemize}
+		
+		\end{thm-s}
+		
+		
+		\begin{thm}[Continuity Of Uniform Limits]{thm:uniflimscont}{ }
+		Let $I \subseteq\mathbb{R}$ be an interval, $f_n, f : I \to \mathbb{R}$ s.t. $f_n \to f$ unifly on $I$ as $n \to \infty$. For all $x_0\in I$, if each $f_n$ is continuous at $x_0$, then $f$ is continuous at $x_0$.
+		\vspace{1pt}
+		\hrule	
+		\vspace{-6pt}
+		\begin{proof}
+			Let $\epsilon > 0$. Since $f_n \to f$ unifly on $I$, $\exists N\in \mathbb{N}$ s.t. $\left|f_n(x) - f(x)\right| <\epsilon/3$ for all $x\in I, n \ge N$. Since $f_N$ is cont. at $x_0\in I$, $\exists \delta >0$ s.t. $\left|f_N(x) - f_N(x_0)\right| <\epsilon/3$ for all $x\in I$ s.t. $\left|x-x_0\right| < \delta$. Now let $x\in I$ be s.t. $\left|x - x_0\right| < \delta$. Then by the TI, $\left|f(x) - f(x_0)\right| \le \left|f(x) - f_N(x)\right| + \left|f_N(x) - f_N(x_0)\right| + \left|f_N(x_0) -f(x_0)\right| <\epsilon$. Thus $f$ is cont. at $x_0\in I$.
+		\end{proof}
+		
+		\end{thm}
+		
+		
+		\begin{dfn}[Uniform Convergence Of Series Of Functions]{dfn:unficonvfuncseries}{ }
+		For $E \subseteq \mathbb{R}$, $E \ne \emptyset$, $f_n : E \to \mathbb{R}$ a seq. of funcs; the \textbf{sequence of partial sums} is $s_n: E \to \mathbb{R}$, $s_n(x) := \sum_{k=1}^{n}f_k(x)$ for $x\in E, n\in \mathbb{N}$. $\sum_{n=1}^{\infty}f_n$
+		\begin{enumerate}[label=(\arabic*)]
+			\item \textbf{Converges pointwise on $E$} if $(s_n)_{n\in \mathbb{N}}$ converges ptwise on $E$.
+			\item \textbf{Converges uniformly on $E$} if $(s_n)_{n\in \mathbb{N}}$ converges unifly on $E$
+			\item \textbf{Cnvges absolutely (ptwise) on $E$} if $\sum_{n=1}^{\infty}\left|f_n(x)\right|$ cnvges $\forall x\in E$.
+		\end{enumerate}
+		
+		\end{dfn}
+		
+		
+		\begin{thm-s}[Continuity of a Uniformly Convergent Series Of Funcs]{thm-s:contofunifconvgfuncseries}{ }
+		Let $I \subseteq \mathbb{R}$ be an interval and $f_n, f : I \to \mathbb{R}$ s.t. $\sum_{n=1}^{\infty}f_n$ converges unfily to $f$ on $I$. For $x_0\in I$, if each $f_n$ is cont. at $x_0$, $f$ is cont. at $x_0$.
+		
+		\end{thm-s}
+		
+		
+		\begin{thm}[On Termwise Differentiation]{thm:trmwisediff}{ }
+		Let $I \subset \mathbb{R}$ be a bdd open interval and $f_n: I \to \mathbb{R}$ a seq. of diffable funcs s.t.:
+		\begin{enumerate}[label=(\arabic*)]
+			\item There exists $x_0\in I$ such that $\sum_{n=1}^{\infty}f_n(x_0)$ converges
+			\item $\sum_{n=1}^{\infty}f_n'$ converges uniformly on $I$.
+		\end{enumerate}
+		Then there exists diffable $f : I \to \mathbb{R}$ such that $\sum_{n=1}^{\infty}f_n$ converges uniformly to $f$ on $I$, and $f'(x) = \left(\sum_{n=1}^{\infty}f_n\right)'(x) = \sum_{n=1}^{\infty}f_n'(x)$ for all $x\in I$.
+		
+		\end{thm}
+		
+		
+		\begin{thm}[Weierstrass M-Test]{thm:weierm}{ }
+		Let $E \subseteq \mathbb{R}$ be $\ne \emptyset$, $f_n: E \to \mathbb{R}$, and $(M_n)_{n\in \mathbb{N}}$ a non-negative seq satisfying:
+		\begin{enumerate}[label=(\arabic*)]
+			\item $\left|f_n(x)\right| \le M_n$ for all $x\in E, n\in \mathbb{N}$
+			\vspace{1pt}
+			\item $\sum_{n=1}^{\infty}M_n$ converges
+		\end{enumerate}
+		Then $\sum_{n=1}^{\infty}f_n$ converges absolutely and uniformly on $E$.
+		\vspace{1pt}
+		\hrule	
+		\vspace{-6pt}
+		\begin{proof}
+			Let $\epsilon > 0$. By the CC for series, $\exists N\in \mathbb{N}$ s.t. $\sum_{k=m+1}^{n} M_k <\epsilon$ for $n \ge m \ge N$. Thus by hypothesis, $\left|\sum_{k=m+1}^{n} f_k(x)\right| \le \sum_{k=m+1}^{n}\left|f_k(x)\right| \le \sum_{k=m+1}^{n}M_k <\epsilon$ for all $x\in E, n > m \ge N$. Thus the partial sums of $\sum_{n=1}^{\infty}f_n$ are unifly Cauchy, so $\sum_{n=1}^{\infty}f_n$ converges unifly. Moreover, by the above, the partial sums of $\sum_{n=1}^{\infty}\left|f_n\right|$ are unifly Cauchy, so the series converges absolutely.
+		\end{proof}
+		
+		\end{thm}
+		
+		
+		
+		{\tiny \textbf{\underline{Power Series}}}
+		
+		
+		
+		\begin{dfn}[Power Series]{dfn:powseries}{ }
+		Let $(a_n)_{n\in \mathbb{N}}$ be a real sequence and $c\in \mathbb{R}$. A \textbf{power series centred at $c$} is a series of the form $\sum_{n=0}^{\infty}a_n(x-c)^n$.
+		
+		\end{dfn}
+		
+		
+		\begin{dfn}[Radius Of Convergence]{dfn:radofconv}{ }
+		Let $(a_n)_{n\in \mathbb{N}}$ be a real seq and $c\in \mathbb{R}$. Then one of the following holds:
+		\begin{enumerate}[label=(\arabic*)]
+			\item $\sum_{n=0}^{\infty}a_n(x-c)^n$ converges only when $x = c$
+			\item $\sum_{n=0}^{\infty}a_n(x-c)^n$ converges absolutely for all $x\in \mathbb{R}$
+			\item There exists $R > 0, R\in \mathbb{R}$ such that $\sum_{n=0}^{\infty}a_n(x-c)^n$ converges absolutely when $\left|x - c\right| < R$ and diverges when $\left|x-c\right|> R$. Here $R = \sup\{r > 0 : (a_nr^n)_{n\in \mathbb{N}_0} \text{is bounded}\}$
+		\end{enumerate}
+		The $R$ in case $(3)$ is the \textbf{radius of convergence} of $\sum_{n=0}^{\infty}a_n(x-c)^n$. In cases $(1)$ and $(2)$ we say $R=0$ and $R = \infty$ respectively.
+		
+		\end{dfn}
+		
+		
+		\begin{thm}[On Termwise Differentiation Of Power Series]{thm:contndiffpwrseries}{ }
+		Let $\sum_{n=0}^{\infty}a_n(x-c)^n$ have radius of convergence $0 < R \le \infty$. Then $f(x) = \sum_{n=0}^{\infty}a_n(x-c)^n$ for $x\in (c-R, c+R)$ is differentiable on $(c-R, c+R)$; and $f'(x) = \sum_{n=1}^{\infty}na_n(x-c)^{n-1}$ for all $x\in (c-R, c+R)$.
+		\begin{itemize}
+			\item Given the above, $f(x) := \sum_{n=0}^{\infty}a_n(x-c)^n$  is \textbf{infinitely differentiable} on $(c-R, c+R)$, and $a_k = \frac{f^{(k)}(c)}{k!}$ for all $k\in \mathbb{N}_0$.
+			\item For $0 < r < R$, both series converge absolutely and unifly on $[c-r, c+r]$
+			\item For any real sequence $(a_n)_{n\in \mathbb{N}_0}$ and $c\in \mathbb{R}$, $\sum_{n=0}^{\infty}a_n(x-c)^n$ and $\sum_{n=1}^{\infty}na_n(x-c)^{n-1}$ have the same radius of convergence
+		\end{itemize}
+		
+		\end{thm}
+		
+		
+		\begin{mthm}[Uniqueness Of Power Series]{thm:uniqpwrsers}{ }
+		Power series are unique - For $\sum_{n=0}^{\infty}a_n(x-c)^n$ and $\sum_{n=0}^{\infty}b_n(x-c)^n$ with RoCs $0 < R, S, \le \infty$, if $\exists 0 < r < \min{R, S}$ s.t. $\sum_{n=0}^{\infty} a_n(x-c)^n = \sum_{n=0}^{\infty}b_n (x-c)^n$ for all $x\in \mathbb{R}$ s.t. $\left|x-c\right| < r$, then $a_n = b_n$ for all $n\in \mathbb{N}$.
+		\vspace{1pt}
+		\hrule	
+		\vspace{-6pt}
+		\begin{proof}
+			Let $I = (c-r, c+r)$, and $f: I \to \mathbb{R}, f(x) := \sum_{n=0}^{\infty}a_n(x-c)^n$ for $x\in I$. We know $f$ is infinitely diffable on $I$, and $a_n = \frac{f^{(n)}(c)}{n!}$ for $n\in \mathbb{N}_0$. However, $f(x) = \sum_{n=0}^{\infty}b_n(x-c)^n$ for $x\in I$, and $b_n = \frac{f^{(n)}(c)}{n!}$ for all $n\in \mathbb{N}_0$. Thus $a_n = b_n$ for all $n\in \mathbb{N}_0$.
+		\end{proof}
+		
+		\end{mthm}
+		
+		
+		\begin{dfn}[Taylor Series]{dfn:tayser}{ }
+		Let $I \subseteq \mathbb{R}$ be a nonempty open interval, and $f: I \to \mathbb{R}$ be infinitely diffable. Then the \textbf{Taylor series of $f$ at $c\in I$} is $\sum_{n=0}^{\infty}\frac{f^{(n)}(c)}{n!}(x-c)^n$.
+		$f$ is \textbf{real analytic} if its TS converges ptwise on $I$ and equals $f(x)$ at $x$
+		
+		\end{dfn}
+		
+		
+		
+	\columnbreak
+	\vspace*{-8pt}
+	%----------------------------------------------------------------------------------%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Bits N Bobs %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%----------------------------------------------------------------------------------%
+		
+		
+		{\footnotesize \textbf{\underline{Useful Stuff}}}
+		
+		
+		
+		\begin{thm}[Random Theorems]{thm:randthms}{ }
+		\begin{itemize}
+			\item Convergent Geometric Series: For $\left|r\right| < 1$, $\frac{1}{1-r} = \sum_{k=0}^{\infty}r^k$
+			\item $\ln(1-x) = - \sum_{n=1}^{\infty} x^n/n$ for $x\in (-1, 1)$.
+			\item L'H\^opital's Rule: For interval $c, L\in \mathbb{R} \cup \{\pm \infty\}$, $I \subseteq \mathbb{R}$, $f, g$ diffable on $I\{c\}$ with $g'(x) \ne 0$, and $\lim_{x\to c} f'(x)/g'(x) = L$; if $\lim_{x\to c}f(x) = \lim_{x\to c} g(x) = 0$ or $\lim_{x\to c}\left|f(x)\right| = \lim_{x\to c} \left|g(x)\right| = \infty$, $\lim_{x\to c} f(x)/g(x) = \lim_{x\to c} f'(x)/g'(x)$. Also holds for one-sided lims.
+			\item IBP: For $u, v$ cont.sly diffable , $\int uv' = uv - \int u'v$
+			\item Let $f: [a, b] \to \mathbb{R}$ be cont. Then:
+			\begin{itemize}
+				\item \textit{MVT}: If $f$ diffable on $(a, b)$; $\exists c\in (a, b)$ s.t. $f'(c) (b-a) = f(b)-f(a)$
+				\item \textit{IVT}: $\forall x$ between $f(a)$ and $f(b)$, $\exists c\in (a, b)$ s.t. $f(c) = x$.
+			\end{itemize}
+		\end{itemize}
+		
+		\end{thm}
+		
+		
+		\begin{dfn}[Random Definitions]{dfn:randdfns}{ }
+		\begin{itemize}
+			\item $\limsup_{n\to \infty}a_n := \lim_{n\to \infty}(\sup_{k \ge n}a_k)$
+			\item $\liminf_{n\to \infty}a_n := \lim_{n\to \infty}(\inf_{k \ge n}a_k)$
+			\item For $\left|x-1\right| \le 1$, $x \ne 0$, $\ln(x) = \sum_{k=1}^{\infty} (-1)^{k-1}(x-1)^k/k$.
+		\end{itemize}
+		
+		\end{dfn}
+		
+		
+		\begin{rem}[Trig Identities]{rem:trig}{ }
+		\vspace{-4pt}
+		\begin{multicols}{2}
+			\begin{itemize}
+				\item $\csc{\theta} = \frac{1}{\sin(\theta)}$, $\sec(\theta) = \frac{1}{\cos(\theta)}$
+				\item $\sin(2\theta) = 2 \sin(\theta)\cos(\theta)$
+				\item $\cos(2\theta) = \cos^2(\theta) - \sin^2(\theta)$   $= 2\cos^2(\theta) - 1 = 1 - 2\sin^2(\theta)$
+				\item $\sin(x) = \sum_{n=0}^{\infty} \frac{(-1)^nx^{2n+1}}{(2n+1)!}$
+				\item $\cos(x) = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!}$.
+				\item $e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} = \lim\limits_{n\to \infty} (1 + \frac{x}{n})^n$
+			\end{itemize}
+			\columnbreak
+			\begin{itemize}
+				\item $\sin'(x) = \cos(x), \cos'(x) = -\sin(x)$
+				\item $\arcsin'(x) = 1/\sqrt{(1-x^2)}$
+				\item $\arccos'(x) = -1/\sqrt{(1-x^2)}$
+				\item $\tan'(x) = \sec^2(x)$
+				\item $\arctan'(x) = 1/(1+x^2)$.
+				\item $\cot'(x) = -\csc^2(x)$
+				\item $\sec'(x) = \sec(x)\tan(x)$
+				\item $\csc'(x) = -\csc(x)\cot(x)$
+				
+			\end{itemize}
+		\end{multicols}
+		\vspace{3pt}
+		\begin{itemize}
+			\item $\sin(\alpha \pm \beta) = \sin(\alpha)\cos(\beta) \pm \cos(\alpha)\sin(\beta)$
+			\item $\cos(\alpha \pm \beta) = \cos(\alpha)\cos(\beta) \mp \sin(\alpha)\sin(\beta)$.
+		\end{itemize}
+		
+		\end{rem}
+		
+		
+		\begin{thm}[Convergence Tests]{thm:convtests}{ }
+		\begin{itemize}
+			\item \textit{Sequences MCT}: If a real sequence $(a_n)_{n \in \mathbb{N}}$ is monotone non-decreasing and bdd above; or monotone non-increasing and bdd below; it converges.
+			\item If a seq converges to $L$, all its subseqs also converge to $L$ (so to disprove convergence find two subseqs converging to different limits).
+			\item \textit{Limsup/inf}: $(x_n)_{n\in \mathbb{N}}$ converges iff $\limsup_{n\to \infty}x_n = \liminf_{n \to \infty}x_n$.
+			\item \textit{p-Series}: $\sum_{n=1}^{\infty}\frac{1}{n^p}$ converges if $p >1$, diverges otherwise.
+			\item \textit{Ratio}: For $\sum_{n=1}^{\infty}$ with all $a_n \ne 0$, $\rho = \lim_{n\to \infty}\left|\frac{a_{n+1}}{a_n}\right|$; if $0 \le \rho < 1$ series converges absolutely, if $\rho > 1$ series diverges.
+			\item \textit{Alternating Series}: For $\sum_{n=1}^{\infty} (-1)^{n+1} b_n$ or $\sum_{n=1}^{\infty}(-1)^n b_n$, if $b_{n +1} \le b_n$ for all $n\ge 1$ and $b_n \to 0$ the series converges.
+			\item \textit{Root}: For $\sum_{n+1}^{\infty}a_n$, $\rho := \lim_{n\to \infty} \sqrt[n]{\left|a_n\right|}$, if $0 \le \rho < 1$ series converges absolutely, if $\rho > 1$ series diverges.
+			\item \textit{Limit Comparison}: For $\sum_{n=1}^{\infty} a_n$ and $\sum_{n=1}^{\infty}b_n$, $a_n \ge 0, b_n > 0$ for all $n$, if $\lim_{n\to \infty} \frac{a_n}{b_n} = c$ with $0 < c < \infty$; both series converge or both diverge.
+		\end{itemize}
+		
+		
 		\end{thm}
 		
 		
